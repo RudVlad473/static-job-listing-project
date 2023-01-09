@@ -1,0 +1,16 @@
+@use "../../components/Job/Job.module.scss" as j;
+
+.main-grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 35px;
+
+  max-width: 1200px;
+  min-width: 300px;
+
+  padding: 0 1em;
+
+  margin: 0 auto;
+
+  translate: 0 calc(j.$padding * (-0.5) + j.$featured-border * (-1));
+}

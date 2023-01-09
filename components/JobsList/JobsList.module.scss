@@ -1,0 +1,20 @@
+@use "../../styles/abstracts/" as *;
+@use "../../components/Job/Job.module.scss" as j;
+
+$row-gap: 20px;
+
+.jobs-list {
+  display: grid;
+  grid-auto-rows: minmax(1fr, 150px);
+  row-gap: $row-gap;
+
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+@media (max-width: $small) {
+  .jobs-list {
+    row-gap: calc($row-gap + j.$padding * 0.5);
+  }
+}

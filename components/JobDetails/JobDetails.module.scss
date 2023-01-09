@@ -1,0 +1,87 @@
+@use "../../styles/abstracts/" as *;
+
+.job-details {
+  grid-area: job-details;
+
+  display: grid;
+  grid-template-areas:
+    "image header"
+    "image body"
+    "image footer";
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1.5em;
+
+  &__image {
+    grid-area: image;
+
+    //min-width: 88px;
+
+    aspect-ratio: 1;
+  }
+
+  &__header,
+  &__footer {
+    display: flex;
+  }
+
+  &__header {
+    grid-area: header;
+    font-weight: $bold;
+
+    gap: 1.25em;
+  }
+
+  &__body {
+    grid-area: body;
+
+    font-size: 1.5rem;
+
+    transition: all 0.05s ease-in;
+
+    &:hover {
+      color: $blue-100;
+    }
+  }
+
+  &__footer {
+    grid-area: footer;
+    white-space: nowrap;
+
+    gap: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  .job-details {
+    position: relative;
+
+    grid-template-areas:
+      "image"
+      "header"
+      "body"
+      "footer";
+
+    &__image {
+      position: absolute;
+
+      top: -44px;
+
+      width: 44px;
+      height: 44px;
+    }
+
+    &__header,
+    &__footer {
+    }
+
+    &__header {
+    }
+
+    &__body {
+      font-size: 1rem;
+    }
+
+    &__footer {
+    }
+  }
+}

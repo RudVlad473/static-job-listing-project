@@ -1,0 +1,15 @@
+@use "../../styles/components/tags-group" as tg;
+@use "../../styles/abstracts/" as *;
+
+.tags {
+  grid-area: tags;
+
+  @extend .tags-group;
+  justify-content: flex-end;
+}
+
+@media (max-width: $small) {
+  .tags {
+    justify-content: flex-start;
+  }
+}
