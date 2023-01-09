@@ -14,7 +14,7 @@
   &__image {
     grid-area: image;
 
-    //min-width: 88px;
+    min-width: 88px;
 
     aspect-ratio: 1;
   }
@@ -63,6 +63,8 @@
 
     &__image {
       position: absolute;
+
+      min-width: auto;
 
       top: -44px;
 
