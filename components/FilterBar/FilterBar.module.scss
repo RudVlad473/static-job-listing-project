@@ -1,0 +1,37 @@
+@use "../../styles/abstracts/" as a;
+@use "../Job/Job.module.scss" as j;
+
+//$presumed-tag-height: 1em * 0.533;
+
+.filter-bar {
+  display: grid;
+  grid-template-areas: "filter-tags clear-btn";
+  grid-template-columns: 1fr auto;
+
+  align-items: center;
+
+  padding: calc(j.$padding * 0.5 + j.$featured-border)
+    calc(j.$padding + j.$featured-border);
+  border-radius: j.$border-radius;
+
+  background-color: a.$gray-200;
+}
+
+.clear-btn {
+  grid-area: clear-btn;
+
+  font-weight: a.$bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: a.$small) {
+  $px-sm: calc(calc(j.$padding + j.$featured-border) * 0.5);
+  $py-sm: calc(calc(j.$padding * 0.5 + j.$featured-border) * 0.5);
+
+  .filter-bar {
+    padding: $py-sm $px-sm $py-sm $py-sm;
+  }
+}

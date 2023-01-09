@@ -1,0 +1,34 @@
+@use "../../styles/abstracts/" as *;
+
+$border-radius: 1rem;
+
+$py: 0.2em;
+$px: 0.5em;
+
+.badge {
+  display: flex;
+  place-items: center;
+
+  position: relative;
+
+  color: $blue-300;
+  font-weight: $bold;
+
+  padding: $py $px;
+  border-radius: $border-radius;
+
+  &--blue {
+    background-color: $blue-100;
+  }
+
+  &--black {
+    background-color: $gray-300;
+  }
+}
+
+@media (max-width: $small) {
+  .badge {
+    font-size: 0.8em;
+    
+  }
+}

@@ -1,0 +1,38 @@
+@use "../../styles/components/tags-group" as tg;
+@use "../../styles/abstracts/" as a;
+@use "../../components/Job/Job.module.scss" as j;
+
+.filter-tags {
+  grid-area: filter-tags;
+
+  @extend .tags-group;
+}
+
+.filter-tag {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.close-btn {
+  background-color: a.$blue-100;
+
+  border-radius: 0 j.$border-radius j.$border-radius 0;
+  padding: 0.5em;
+  border: none;
+
+  margin-left: j.$border-radius * (-1);
+
+  transition: all 0.05s ease-in;
+
+  &:hover {
+    color: a.$gray-200;
+
+    background-color: a.$gray-300;
+  }
+}
+
+@media (max-width: a.$small) {
+  .filter-tag {
+    
+  }
+}
