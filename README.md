@@ -13,6 +13,6 @@ NextJS application that represents job listing page, where users can:
 
 - **SCSS Modules**
 
-# State manager
+## State manager
 
 - **React Context**
